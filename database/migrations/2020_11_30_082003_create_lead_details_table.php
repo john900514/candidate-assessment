@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateLeadDetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('lead_details', function (Blueprint $table) {
             $table->uuid('id')->primary()->unique();
-            $table->string('first_name')->nullable();
-            $table->string('last_name')->nullable();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('client_id');
+            $table->string('lead_id');
+            $table->string('field');
+            $table->string('value')->nullable();
+            $table->mediumText('misc')->nullable();
+
+            $table->boolean('active')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('lead_details');
     }
-};
+}
