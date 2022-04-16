@@ -3,7 +3,7 @@
         <input id="my-drawer-4" type="checkbox" class="drawer-toggle" :checked="showSidebar">
         <div class="drawer-side fixed" :class="showSidebar ? 'z-50 h-screen' : ''">
             <label for="my-drawer-4" class="drawer-overlay"></label>
-            <ul class="menu p-4 overflow-y-auto w-screen sm:w-96 bg-base-100 text-base-content">
+            <ul class="menu p-4 overflow-y-auto w-screen sm:w-96 bg-slightly-transparent-black text-base-content">
                 <div class="text-right">
                     <label for="my-drawer-4" class="">
                         <button type="button" class="inline-flex items-center justify-center p-2 ml-3 text-white rounded-full hover:text-secondary hover:bg-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cool-indigo-500" @click="toggleShowSidebar()">
@@ -13,9 +13,20 @@
                     </label>
                 </div>
                 <!-- Sidebar content here -->
-                <li><a>Sidebar Item 1</a></li>
-                <li><a>Sidebar Item 2</a></li>
+                <li><a class="uppercase font-bold text-xl hover:text-secondary">Home</a></li>
+                <li><a class="uppercase font-bold text-xl hover:text-secondary">Programs & Services</a></li>
+                <li><a class="uppercase font-bold text-xl hover:text-secondary">Combo6</a></li>
+                <li><a class="uppercase font-bold text-xl hover:text-secondary">Classes</a></li>
+                <li><a class="uppercase font-bold text-xl hover:text-secondary">About</a></li>
+                <li><a class="uppercase font-bold text-xl hover:text-secondary">Remodel</a></li>
+                <li><a class="uppercase font-bold text-xl hover:text-secondary">Latest News</a></li>
+                <li><a class="uppercase font-bold text-xl hover:text-secondary">Faq</a></li>
+                <li><a class="uppercase font-bold text-xl hover:text-secondary">Contact Us</a></li>
+                <li><a class="uppercase hover:text-secondary"><i class="lar la-user text-xl mr-2 text-secondary"></i> Memberships</a></li>
+                <li><a class="uppercase hover:text-secondary"><i class="las la-map-marker text-xl mr-2 text-secondary"></i> Locations</a></li>
+                <li><a class="uppercase hover:text-secondary"><i class="las la-lock text-xl mr-2 text-secondary"></i> Member Login</a></li>
             </ul>
+
         </div>
     </div>
     <nav class="bg-transparent border-b border-gray-200 fixed top-0 w-full py-2" :class="showSidebar ? '' : 'z-50'">

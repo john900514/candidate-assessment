@@ -76,6 +76,10 @@
     @apply !bg-base-300;
 }
 
+.bg-slightly-transparent-black {
+    background-color: rgba(0,0,0, 0.9);
+}
+
 
 *{
     --fc-neutral-bg-color: hsla(var(--n) / var(--tw-bg-opacity, 1));
