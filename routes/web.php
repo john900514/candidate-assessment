@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group([
+    'middleware' => array_merge(
+        (array) config('backpack.base.web_middleware', 'web'),
+    ),
+    'namespace'  => 'App\Http\Controllers',
+], function () { // custom admin routes
+    Route::get('/', 'Mainsite\HomeController@index');
 });

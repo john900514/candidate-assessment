@@ -15,7 +15,6 @@ class CreateLeadDetailsTable extends Migration
     {
         Schema::create('lead_details', function (Blueprint $table) {
             $table->uuid('id')->primary()->unique();
-            $table->string('client_id');
             $table->string('lead_id');
             $table->string('field');
             $table->string('value')->nullable();
