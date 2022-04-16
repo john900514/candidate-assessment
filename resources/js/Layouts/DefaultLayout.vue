@@ -1,15 +1,18 @@
 <template>
     <div class="min-h-screen overflow-hidden">
-        <div class="relative mt-16 overflow-hidden md:mt-18 bg-gradient-to-b from-gray-50 to-white">
+        <div class="relative overflow-hidden md:mt-18 bg-primary from-gray-50 to-white">
             <div class="relative pb-4">
-                <default-header></default-header>
-
-                <main class="px-4 mx-auto mt-10 max-w-7xl sm:mt-14">
-                    <slot></slot>
-                </main>
+                <default-header>
+                    <template #extraHead>
+                        <main class="px-4 mx-auto mt-10 max-w-7xl sm:mt-14 pt-16 bg-primary">
+                            <slot name="layoutExtraHead"></slot>
+                        </main>
+                    </template>
+                </default-header>
             </div>
         </div>
 
+        <slot name="content"></slot>
 
         <default-footer></default-footer>
     </div>

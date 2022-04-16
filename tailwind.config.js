@@ -12,7 +12,7 @@ Object.entries(twColors).forEach(
 const colors = {
     ...twColors,
     primary: {
-        DEFAULT: "#073A76",
+        DEFAULT: "#0b3e6f",
         50: "#98C4F9",
         100: "#7BB4F7",
         200: "#4193F4",
@@ -25,7 +25,7 @@ const colors = {
         900: "#000102",
     },
     secondary: {
-        DEFAULT: "#0074C8",
+        DEFAULT: "#35A2FE",
         50: "#AFDDFF",
         100: "#95D2FF",
         200: "#62BDFF",
