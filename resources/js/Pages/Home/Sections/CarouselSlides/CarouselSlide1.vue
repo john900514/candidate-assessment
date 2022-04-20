@@ -22,7 +22,7 @@
                         </div>
                         <div class="copy-divider py-2"></div>
                         <div class="sm-copy-box pt-4">
-                            <span class="text-2xl  text-black md:text-white">RESET RECHARGE</span><br>
+                            <span class="text-2xl text-black md:text-white">RESET RECHARGE</span><br>
                             <span class="text-2xl  text-black md:text-white">YOUR SAFETY IS OUR #1 PRIORITY</span>
                         </div>
                     </div>

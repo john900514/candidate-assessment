@@ -1,35 +1,31 @@
 <template>
     <div id="MustLoveClubs" class="banner-wrapper-s" :style="slide3Img()">
-        <div class="banner-bottom">
-            <div class="inner-bottom">
-                <div class="bottom-section">
-                    <div class="bottom-left">
-                        <div class="big-ol-copy-box">
-                            <div class="inner-copy-box">
-                                <div class="lg-copy-box">
-                                    <p style="padding-top:1em;&quot;"> <span class="the-blue-text">THE</span><span style="color: #fff;font-size: .5em;"> DESTINATION FOR</span></p>
-                                    <p><span style="color: #fff;font-size: .8em;">FAMILY SUMMER FUN</span></p>
-                                </div>
-                                <div class="sm-copy-box2">
-
-                                </div>
-                                <div class="copy-divider"></div>
-                                <div class="sm-copy-box">
-                                    <p><span style="color: #fff;"> POOLS, THE KIDS CLUB, CAMPS &amp; MORE!</span></p>
-                                </div>
-                            </div>
+        <div class="w-full flex flex-col md:flex-row-reverse pt-8">
+            <div id="leftBottom" class="pt-18 flex flex-col pl-4 md:pl-12 md:w-full mt-[15%]">
+                <div class="big-ol-copy-box text-left">
+                    <div class="inner-copy-box">
+                        <div class="lg-copy-box">
+                            <p class="pb-2"> <span class="font-black text-6xl text-secondary md:text-7xl">THE</span><span class="font-black text-2xl text-white md:text-3xl"> DESTINATION FOR</span></p>
+                            <p><span class="font-black text-5xl md:text-6xl">FAMILY SUMMER FUN</span></p>
                         </div>
+                        <div class="sm-copy-box2">
 
-                        <div class="outer-button-panel">
-                            <div class="inner-button-panel">
-                                <div class="button-panel">
-                                    <div class="button-wrapper">
-                                        <button type="button" id="joinButton" class="join-button" onclick="window.location.href = '/locations'" tabindex="-1">Enroll Now</button>
-                                    </div>
-                                    <div class="button-wrapper alt">
-                                        <button type="button" id="learnButton" class="join-button" onclick="window.location.href = '/free-pass'" tabindex="-1">3 DAY COMPLIMENTARY MEMBERSHIP</button>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="copy-divider py-4"></div>
+                        <div class="sm-copy-box pt-8">
+                            <p><span class="text-4xl text-white"> POOLS, THE KIDS CLUB, CAMPS &amp; MORE!</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="outer-button-panel text-left">
+                    <div class="inner-button-panel w-full">
+                        <div class="button-panel flex flex-col md:flex-row pt-4">
+                            <div class="button-wrapper">
+                                <button type="button" id="joinButton" class="btn btn-secondary hover:btn-black w-[80%] md:w-full rounded-[0px] text-xl tracking-wider h-[5.25rem]" onclick="window.location.href = '/locations'" tabindex="-1">Enroll Now</button>
+                            </div>
+                            <div class="button-wrapper alt pt-4 md:pt-0 md:pl-8">
+                                <button type="button" id="learnButton" class="btn hover:btn-secondary w-[80%] md:w-full rounded-[0px] text-xl tracking-wider h-[5.25rem]" onclick="window.location.href = '/free-pass'" tabindex="-1"><p class="pt-2">3 DAY COMPLIMENTARY MEMBERSHIP</p></button>
                             </div>
                         </div>
                     </div>
@@ -78,5 +74,10 @@ export default {
     height: 48em;
     width: 100%;
     background-position-x: 40%;
+}
+
+.copy-divider {
+    border-bottom: 2px solid #fff;
+    width: 7.5%;
 }
 </style>
