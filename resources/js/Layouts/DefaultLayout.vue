@@ -1,10 +1,10 @@
 <template>
     <div class="min-h-screen overflow-hidden">
-        <div class="relative overflow-hidden md:mt-18 bg-primary from-gray-50 to-white">
-            <div class="relative pb-4">
+        <div class="relative overflow-hidden bg-primary from-gray-50 to-white">
+            <div class="relative">
                 <default-header>
                     <template #extraHead>
-                        <main class="px-4 mx-auto mt-10 max-w-7xl sm:mt-14 pt-16 bg-primary">
+                        <main class="w-full bg-primary">
                             <slot name="layoutExtraHead"></slot>
                         </main>
                     </template>
@@ -14,7 +14,9 @@
 
         <slot name="content"></slot>
 
-        <default-footer></default-footer>
+        <default-footer
+            :prefooter="showPrefooter"
+        ></default-footer>
     </div>
 </template>
 
@@ -23,6 +25,7 @@ import DefaultHeader from "@/Layouts/Includes/DefaultHeader";
 import DefaultFooter from "@/Layouts/Includes/DefaultFooter";
 export default {
     name: "DefaultLayout",
+    props: ['showPrefooter'],
     components: {
         DefaultHeader,
         DefaultFooter

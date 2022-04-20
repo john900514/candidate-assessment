@@ -29,8 +29,6 @@
         "vue-loader": "^17.0.0"
     },
     "dependencies": {
-        "sweet-modal-vue": "^2.0.0",
-        "vue": "^3.2.31",
         "@vueform/multiselect": "^2.3.1",
         "canvg": "^3.0.9",
         "daisyui": "^1.21.0",
@@ -41,9 +39,12 @@
         "noty": "^3.2.0-beta-deprecated",
         "prettier": "^2.5.0",
         "pretty-bytes": "^5.6.0",
+        "sweet-modal-vue": "^2.0.0",
+        "vue": "^3.2.31",
         "vue-composable": "1.0.0-beta.24",
         "vue-json-pretty": "^2.0.6",
         "vue-slide-up-down": "^2.0.1",
+        "vue3-carousel": "^0.1.38",
         "vue3-date-time-picker": "^2.4.4",
         "vue3-slide-up-down": "^1.2.3"
     }

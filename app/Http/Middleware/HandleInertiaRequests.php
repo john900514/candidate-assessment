@@ -41,7 +41,17 @@ class HandleInertiaRequests extends Middleware
     {
         $shared = [
             'headerLogo' => asset('img/header-logo.png'),
+            'footerShardImg' => asset('img/CTA-image.png'),
+            'homeCarouselBGs' => [
+                'CarouselSlide1' => 'url('.asset('img/slide1.jpeg').')',
+                'CarouselSlide1Mobile' => 'url('.asset('img/slide1Mobile.jpeg').')',
+                'CarouselSlide2' => 'url('.asset('img/slide2.jpeg').')',
+                'CarouselSlide2Mobile' => 'url('.asset('img/slide2Mobile.jpeg').')',
+                'CarouselSlide3' => 'url('.asset('img/slide3.jpeg').')',
+                'CarouselSlide3Mobile' => 'url('.asset('img/slide3Mobile.jpeg').')',
+            ],
         ];
+
         $previousUrl = url()->previous();
 
         if (!empty($previousUrl) && $previousUrl !== route('backpack.auth.login') && $previousUrl !== url()->current()) {

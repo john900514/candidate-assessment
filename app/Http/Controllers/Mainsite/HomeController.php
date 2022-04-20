@@ -10,7 +10,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $data = [];
+        $data = [
+            'prefooter' => true
+        ];
         return Inertia::render('Home/HomePage', $data);
     }
 }

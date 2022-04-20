@@ -1,4 +1,19 @@
 <template>
+    <div id="prefootCallToAction" class="bg-black md:flex" v-if="prefooter">
+        <div id="actualCallToAction" class="md:w-2/5 pt-16 md:pt-48">
+            <h1 class="text-7xl mr-32 font-black -ml-2">START YOUR ATHLETIC CLUB EXPERIENCE</h1>
+            <div id="ctaButtonPanel" class="pt-8 pl-16 pb-8 md:pb-2">
+                <h3 class="text-2xl font-bold pb-8">CHECK OUT OUR MEMBERSHIP OPTIONS TODAY</h3>
+                <button type="button" id="anotherJoinButton" class="panel-button-full btn rounded-[0px] tracking-widest btn-secondary hover:bg-black hover:border-white" onclick="window.location.href= '/locations'"><b>JOIN THE CLUB</b></button>
+                <button type="button" id="freePassButton" class="panel-button btn ml-4 rounded-[0px] tracking-widest hover:btn-secondary border-white bg-black" onclick="window.location.href= '/free-pass'"><b>FREE PASS</b></button>
+            </div>
+        </div>
+        <div id="rhombusImageWrapper" class="hidden md:flex md:w-3/5 object-contain">
+            <img :src="$page.props.footerShardImg" id="rhombusImg" alt="Rhombus Image" class="h-[47rem] w-full">
+        </div>
+
+        <div id="emptyRow"></div>
+    </div>
     <footer class="bg-white" aria-labelledby="footerHeading">
         <h2 id="footerHeading" class="sr-only">Footer</h2>
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
@@ -42,7 +57,11 @@
 
 <script>
 export default {
-    name: "DefaultFooter"
+    name: "DefaultFooter",
+    props: ['prefooter'],
+    mounted() {
+
+    },
 }
 </script>
 
