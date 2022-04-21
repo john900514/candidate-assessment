@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +35,7 @@ Route::group([
     Route::get('/programs', 'Mainsite\ProgramsController@index');
     Route::get('/free-trial', 'Mainsite\OffersController@free_trial');
     Route::get('/news', 'Mainsite\NewsController@index');
+    Route::get('/counter', function(){
+        return Inertia::render('Challenges/Counter');
+    });
 });
