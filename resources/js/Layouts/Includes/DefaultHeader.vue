@@ -19,7 +19,7 @@
                 <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Classes</a></li>
                 <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">About</a></li>
                 <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Remodel</a></li>
-                <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Latest News</a></li>
+                <li><Link class="uppercase font-bold text-xl hover:text-secondary" href="/news">Latest News</Link></li>
                 <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Faq</a></li>
                 <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Contact Us</a></li>
                 <li><a class="uppercase hover:text-secondary" @click.prevent="notAvailable()"><i class="lar la-user text-xl mr-2 text-secondary"></i> Memberships</a></li>
