@@ -2,7 +2,7 @@
     <default-layout
         :show-prefooter="prefooter"
     >
-        <template v-slot:content>
+        <template #content>
             <div id="content" class="bg-slate-500 pt-[25%] md:pt-[10%] pb-12 md:pb-32">
                 <div class="section-heading text-center pt-8 pb-12">
                     <h1 class="text-6xl">PROGRAMS &amp; SERVICES</h1>

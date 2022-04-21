@@ -11,6 +11,7 @@ Object.entries(twColors).forEach(
 
 const colors = {
     ...twColors,
+    transparent: 'transparent',
     primary: {
         DEFAULT: "#0b3e6f",
         50: "#98C4F9",
