@@ -1,0 +1,8 @@
+id,club_id,club_name,address1,address2,city,state,zip_code,active,lat,long,phone,email,hours
+995deb97-a583-45e7-a980-a5c2b2f41838,TR21,132nd & Center,2275 S. 132nd Street,NULL,Omaha,NE,68144,1,41.237538,-96.118053,402-691-8546,omaha132@theathleticclub.com,"[""M-F 5am - 9pm"",""S 5am - 8pm"",""Su 7am - 8pm""]"
+50cc0552-827d-4c6a-b818-65fcf2135620,TR22,84th & Q Street,8525 Q. Street,NULL,Omaha,NE,68127,1,41.204298,-96.044595,402-537-0430,omahaq@theathleticclub.com,"[""M-F 5am - 9pm"",""S 6am - 8pm"",""Su 7am - 8pm""]"
+bc1ce913-79c8-420e-9dd0-6778204964cc,TR23,Midtown Crossing,200 S 31st Ave Farnam Street,#401,Omaha,NE,68131,1,41.257709,-95.959107,402-916-5000,midtowncrossing@theathleticclub.com,"[""M-F 5am - 9pm"",""S 6am - 8pm"",""Su 9am - 6pm""]"
+eacab1c1-0305-4bf8-a7f7-d1e430746453,TR20,Lincoln,1305 S. 70th Street,NULL,Lincoln,NE,68510,1,40.800262,-96.625463,402-483-2322,lincoln70th@theathleticclub.com,"[""M-F 5am - 9pm"",""S-Su 6am - 8pm""]"
+ebe3828e-875c-405a-969a-0667cfa1436c,TR24,Overland Park,10351 Barkley Street,NULL,Overland Park,KS,66212,1,38.940869,-94.663693,913-648-8077,overlandpark@theathleticclub.com,"[""M-Th 5am - 10pm"",""F 5am - 8pm"",""S-Su 6am - 8pm""]"
+71fb1038-f31b-4e3e-bd61-e6422a99c7cd,TR25,Olathe,13655 S. Alden St,NULL,Olathe,KS,66062,1,38.881971,-94.755537,913-764-5444,tac-olathe@theathleticclub.com,"[""M-Th 5am - 10pm"",""F 5am - 8pm"",""S-Su 6am - 8pm""]"
+48aee6ec-393a-413c-9439-6ea9c68d477c,TR26,Iowa,4875 Mills Civic Pkwy,NULL,West Des Moines,IA,50265,1,41.561354,-93.768478,515-223-5999,w-des-moines@theathleticclub.com,"[""M-F 5am - 11pm"",""S-Su 6am - 10pm""]"
