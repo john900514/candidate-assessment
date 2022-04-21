@@ -12,6 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group([
+    'middleware' => array_merge(
+        (array) config('backpack.base.web_middleware', 'web'),
+    ),
+    'namespace'  => 'App\Actions',
+], function () { // custom admin routes
+    Route::post('/free-trial', 'Leads\ProcessFreeTrialAction');
+});
 
 Route::group([
     'middleware' => array_merge(

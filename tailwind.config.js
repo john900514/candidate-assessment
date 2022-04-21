@@ -69,7 +69,8 @@ module.exports = {
         extend: {
             colors,
             fontFamily: {
-                sans: ["Nunito", ...defaultTheme.fontFamily.sans],
+                sans: ["Roboto", ...defaultTheme.fontFamily.sans],
+                serif: ["Roboto Condensed", ...defaultTheme.fontFamily.serif],
             },
             fontSize: {
                 "2xs": ["0.6rem", { lineHeight: "0.75rem" }],

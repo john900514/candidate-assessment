@@ -44,9 +44,9 @@
                 <div class="flex items-center justify-end flex-1 px-2 sm:justify-center lg:ml-6 lg:justify-end">
                     <div class="hidden md:flex lg:ml-6 xl:ml-8 lg:space-x-8" data-turbo="false">
                         <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-                        <Link class="border-transparent text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold uppercase tracking-wide" href="/offers"><i class="lar la-user text-xl mr-2 text-secondary font-bold"></i> Current Offers</Link>
-                        <a class="border-transparent text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold uppercase tracking-wide" href="#" @click.prevent="notAvailable()"><i class="las la-lock text-xl mr-2 text-secondary font-bold"></i> Member Login</a>
-                        <Link class="border-transparent text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold uppercase tracking-wide" href="/locations"><i class="lar la-map-marker text-xl mr-2 text-secondary font-bold"></i> Locations</Link>
+                        <Link class="border-transparent text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-serif font-normal uppercase tracking-wide" href="/offers"><i class="lar la-user text-xl mr-2 text-secondary font-bold"></i> Current Offers</Link>
+                        <a class="border-transparent text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-serif font-normal uppercase tracking-wider" href="#" @click.prevent="notAvailable()"><i class="las la-lock text-xl mr-2 text-secondary font-bold"></i> Member Login</a>
+                        <Link class="border-transparent text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-serif font-normal uppercase tracking-wide" href="/locations"><i class="lar la-map-marker text-xl mr-2 text-secondary font-bold"></i> Locations</Link>
                         <button type="button" class="md:visible inline-flex items-center justify-center p-2 ml-3 text-white rounded-full hover:text-secondary hover:bg-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cool-indigo-500"
                                 @click="toggleShowSidebar()">
                             <span class="sr-only">Open main menu</span>
