@@ -19,12 +19,10 @@ import { defineComponent } from 'vue'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
 
-import CarouselSlide1 from "@/Pages/Home/Sections/CarouselSlides/CarouselSlide1";
-import CarouselSlide2 from "@/Pages/Home/Sections/CarouselSlides/CarouselSlide2";
-import CarouselSlide3 from "@/Pages/Home/Sections/CarouselSlides/CarouselSlide3";
+import CarouselSlide1 from "@/Pages/Offers/Sections/CarouselSlides/OfferSlide1";
 
 export default {
-    name: "HomeCarousel",
+    name: "OffersCarousel",
     props: ['slideComponents'],
     components: {
         Carousel,
@@ -33,8 +31,6 @@ export default {
         Navigation,
 
         CarouselSlide1,
-        CarouselSlide2,
-        CarouselSlide3,
     },
 
     data() {

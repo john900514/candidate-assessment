@@ -13,18 +13,18 @@
                     </label>
                 </div>
                 <!-- Sidebar content here -->
-                <li><a class="uppercase font-bold text-xl hover:text-secondary">Home</a></li>
-                <li><a class="uppercase font-bold text-xl hover:text-secondary">Programs & Services</a></li>
-                <li><a class="uppercase font-bold text-xl hover:text-secondary">Combo6</a></li>
-                <li><a class="uppercase font-bold text-xl hover:text-secondary">Classes</a></li>
-                <li><a class="uppercase font-bold text-xl hover:text-secondary">About</a></li>
-                <li><a class="uppercase font-bold text-xl hover:text-secondary">Remodel</a></li>
-                <li><a class="uppercase font-bold text-xl hover:text-secondary">Latest News</a></li>
-                <li><a class="uppercase font-bold text-xl hover:text-secondary">Faq</a></li>
-                <li><a class="uppercase font-bold text-xl hover:text-secondary">Contact Us</a></li>
-                <li><a class="uppercase hover:text-secondary"><i class="lar la-user text-xl mr-2 text-secondary"></i> Memberships</a></li>
-                <li><a class="uppercase hover:text-secondary"><i class="las la-map-marker text-xl mr-2 text-secondary"></i> Locations</a></li>
-                <li><a class="uppercase hover:text-secondary"><i class="las la-lock text-xl mr-2 text-secondary"></i> Member Login</a></li>
+                <li><Link class="uppercase font-bold text-xl hover:text-secondary">Home</Link></li>
+                <li><Link class="uppercase font-bold text-xl hover:text-secondary" href="/programs">Programs & Services</Link></li>
+                <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Combo6</a></li>
+                <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Classes</a></li>
+                <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">About</a></li>
+                <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Remodel</a></li>
+                <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Latest News</a></li>
+                <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Faq</a></li>
+                <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Contact Us</a></li>
+                <li><a class="uppercase hover:text-secondary" @click.prevent="notAvailable()"><i class="lar la-user text-xl mr-2 text-secondary"></i> Memberships</a></li>
+                <li><Link class="uppercase hover:text-secondary" href="/locations"><i class="las la-map-marker text-xl mr-2 text-secondary"></i> Locations</Link></li>
+                <li><a class="uppercase hover:text-secondary" @click.prevent="notAvailable()"><i class="las la-lock text-xl mr-2 text-secondary"></i> Member Login</a></li>
             </ul>
 
         </div>
@@ -44,9 +44,9 @@
                 <div class="flex items-center justify-end flex-1 px-2 sm:justify-center lg:ml-6 lg:justify-end">
                     <div class="hidden md:flex lg:ml-6 xl:ml-8 lg:space-x-8" data-turbo="false">
                         <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-                        <a class="border-transparent text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold uppercase tracking-wide" href="/"><i class="lar la-user text-xl mr-2 text-secondary font-bold"></i> Current Offers</a>
-                        <a class="border-transparent text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold uppercase tracking-wide" href="/?type=template"><i class="las la-lock text-xl mr-2 text-secondary font-bold"></i> Member Login</a>
-                        <a class="border-transparent text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold uppercase tracking-wide" href="/?type=kit"><i class="lar la-map-marker text-xl mr-2 text-secondary font-bold"></i> Locations</a>
+                        <Link class="border-transparent text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold uppercase tracking-wide" href="/offers"><i class="lar la-user text-xl mr-2 text-secondary font-bold"></i> Current Offers</Link>
+                        <a class="border-transparent text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold uppercase tracking-wide" href="#" @click.prevent="notAvailable()"><i class="las la-lock text-xl mr-2 text-secondary font-bold"></i> Member Login</a>
+                        <Link class="border-transparent text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold uppercase tracking-wide" href="/locations"><i class="lar la-map-marker text-xl mr-2 text-secondary font-bold"></i> Locations</Link>
                         <button type="button" class="md:visible inline-flex items-center justify-center p-2 ml-3 text-white rounded-full hover:text-secondary hover:bg-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cool-indigo-500"
                                 @click="toggleShowSidebar()">
                             <span class="sr-only">Open main menu</span>
@@ -81,9 +81,13 @@
 
 <script>
 import { Inertia } from "@inertiajs/inertia";
+import { Link } from '@inertiajs/inertia-vue3'
 
 export default {
     name: "DefaultHeader",
+    components: {
+        Link
+    },
     data() {
         return {
             showSidebar: false,
@@ -92,6 +96,14 @@ export default {
     methods: {
         toggleShowSidebar() {
             this.showSidebar = !this.showSidebar;
+        },
+        notAvailable() {
+            new Noty({
+                type: "warning",
+                theme: "sunset",
+                text: "Feature Not Available!",
+                timeout: 7500,
+            }).show();
         }
     },
     mounted() {

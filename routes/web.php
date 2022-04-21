@@ -20,4 +20,9 @@ Route::group([
     'namespace'  => 'App\Http\Controllers',
 ], function () { // custom admin routes
     Route::get('/', 'Mainsite\HomeController@index');
+    Route::get('/offers', 'Mainsite\OffersController@index');
+    Route::get('/locations', 'Mainsite\LocationsController@index');
+    Route::get('/clubs/{club_id}', 'Mainsite\LocationsController@show');
+    Route::get('/programs', 'Mainsite\ProgramsController@index');
+    Route::get('/free-trial', 'Mainsite\OffersController@free_trial');
 });

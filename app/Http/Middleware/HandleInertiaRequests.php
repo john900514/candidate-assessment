@@ -50,6 +50,11 @@ class HandleInertiaRequests extends Middleware
                 'CarouselSlide3' => 'url('.asset('img/slide3.jpeg').')',
                 'CarouselSlide3Mobile' => 'url('.asset('img/slide3Mobile.jpeg').')',
             ],
+            'offerImgs' => [
+                'img1' => asset('img/offers-something-for-everyone.png'),
+                'img2' => asset('img/offers-superior.png'),
+                'img3' => asset('img/offers-3day-pass.png'),
+            ]
         ];
 
         $previousUrl = url()->previous();

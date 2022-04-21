@@ -3,7 +3,7 @@
         :show-prefooter="prefooter"
     >
         <template #layoutExtraHead>
-            <carousel></carousel>
+            <carousel :slide-components="slideComponents"></carousel>
         </template>
 
         <template v-slot:content>
@@ -73,6 +73,15 @@ export default {
         DefaultLayout
     },
     props: ['prefooter'],
+    data() {
+        return {
+            slideComponents: {
+                CarouselSlide1: {},
+                CarouselSlide2: {},
+                CarouselSlide3: {}
+            }
+        }
+    },
     mounted() {
 
     }
