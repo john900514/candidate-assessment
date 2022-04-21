@@ -20,6 +20,7 @@ Route::group([
     'namespace'  => 'App\Actions',
 ], function () { // custom admin routes
     Route::post('/free-trial', 'Leads\ProcessFreeTrialAction');
+    Route::post('/contact', 'Contact\ProcessContactForm');
 });
 
 Route::group([
@@ -35,6 +36,9 @@ Route::group([
     Route::get('/programs', 'Mainsite\ProgramsController@index');
     Route::get('/free-trial', 'Mainsite\OffersController@free_trial');
     Route::get('/news', 'Mainsite\NewsController@index');
+    Route::get('/contact', function(){
+        return Inertia::render('Contact/Index');
+    });
     Route::get('/counter', function(){
         return Inertia::render('Challenges/Counter');
     });

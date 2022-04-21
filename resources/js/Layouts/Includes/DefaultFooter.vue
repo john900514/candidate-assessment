@@ -32,7 +32,7 @@
                         <Link href="/programs" class="mx-2 text-black">Programs &amp; Services</Link>
                         <a href="/classes" class="mx-2 text-black" @click.prevent="notAvailable()">Classes</a>
                         <a href="/about" class="mx-2 text-black" @click.prevent="notAvailable()">About</a>
-                        <a href="/contact" class="mx-2 text-black" @click.prevent="notAvailable()">Contact Us</a>
+                        <Link href="/contact" class="mx-2 text-black">Contact Us</Link>
                         <a href="/faq" class="mx-2 text-black" @click.prevent="notAvailable()">FAQs</a>
                     </div>
                 </div>
