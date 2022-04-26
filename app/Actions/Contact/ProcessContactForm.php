@@ -15,6 +15,7 @@ class ProcessContactForm
             'name' => 'required|string',
             'email' => 'required|email',
             'phone' => 'required|numeric',
+            'message' => 'string|nullable'
         ];
     }
 

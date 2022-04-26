@@ -17,10 +17,10 @@ class LocationsController extends Controller
             'clubs' => []
         ];
 
-        $clubs = Location::whereActive(1);
+        $clubs = Location::whereActive(1)->get();
         foreach($clubs as $club)
         {
-            $data['club'][$club->club_id] = $club->club_name;
+            $data['clubs'][$club->club_id] = $club->club_name;
         }
 
         return Inertia::render('Locations/Index/LocationsDirectoryPage', $data);
@@ -41,7 +41,7 @@ class LocationsController extends Controller
             throw LocationException::clubDoesNotExist();
         }
 
-        $data['clubs'] = $club->toArray();
+        $data['club'] = $club->toArray();
 
         return Inertia::render('Locations/ClubInfo/ClubInfoPage', $data);
     }

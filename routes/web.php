@@ -42,4 +42,8 @@ Route::group([
     Route::get('/counter', function(){
         return Inertia::render('Challenges/Counter');
     });
+    Route::get('/amenities', function(){
+        $amenities = \App\Models\Amenities::whereDeletedAt(null);
+        return Inertia::render('Amenities/Index/AmenitiesPage', ['amenities'=>$amenities]);
+    });
 });

@@ -18,6 +18,7 @@
                 <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Combo6</a></li>
                 <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Classes</a></li>
                 <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">About</a></li>
+                <li><Link class="uppercase font-bold text-xl hover:text-secondary" href="/amenities">Amenities</Link></li>
                 <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Remodel</a></li>
                 <li><Link class="uppercase font-bold text-xl hover:text-secondary" href="/news">Latest News</Link></li>
                 <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Faq</a></li>

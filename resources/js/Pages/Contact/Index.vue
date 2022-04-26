@@ -5,7 +5,7 @@
                 <h1 class="text-6xl">CONTACT US</h1>
                 <form
                     @submit.prevent="handleSubmit"
-                    class="flex flex-col gap-4"
+                    class="flex flex-col gap-4 mb-2"
                 >
                     <div class="form-control">
                         <label for="name">Name</label>
@@ -26,6 +26,13 @@
                         <phone-input id="phone" v-model="form.phone"/>
                         <div v-if="form.errors.phone" class="form-error">
                             {{ form.errors.phone }}
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label for="name">Message</label>
+                        <textarea id="message" v-model="form.message"/>
+                        <div v-if="form.errors.message" class="form-error">
+                            {{ form.errors.message }}
                         </div>
                     </div>
                     <button type="submit">Submit</button>
