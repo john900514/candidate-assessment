@@ -11,6 +11,7 @@ This assessment repo is built on top of one of our go-to stacks:
 ##Getting it running
 You will need:
 - PHP 8.1+
+- Composer
 - MySQL (LTS or latest)
 - Node (LTS or latest)
 
@@ -20,10 +21,10 @@ Once you have pulled down the code:
 - npm install
 - php artisan serve
 
-At this point, you should be able to localhost:8080, and see the website.
+At this point, you should be able to navigate to localhost:8080, and see the website.
 - npm run develop - does a single development build
 - npm run watch - watches for code changes, and reruns development builds automatically
-- npm run hot - same as npm run watch, but tries to hotreload the code so you don't have to refresh the page in your browser.
+- npm run hot - same as npm run watch, but tries to hot reload the code so you don't have to refresh the page in your browser.
 
 ## Instructions
 You will be given 2-4 hours to complete as many tickets as you want.  Which tickets you chose to complete are up to you. We include multiple ticket types ranging from fullstack/frontend/backend, and both bug fixes and new feature implementations.
