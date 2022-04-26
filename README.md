@@ -14,7 +14,7 @@ You will need:
 - PHP 8.1+
 - Composer
 - MySQL (LTS or latest)
-- Node (LTS or latest)
+- Node 16
 
 Once you have pulled down the code:
 - copy .env.example to .env
