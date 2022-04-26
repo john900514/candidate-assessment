@@ -36,6 +36,7 @@ You will need:
 
 Once you have pulled down the code:
 - copy .env.sail to .env
+- composer install
 - ./vendor/bin/sail up
 - ./vendor/bin/sail artisan migrate:fresh --seed
 
