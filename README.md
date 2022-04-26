@@ -16,6 +16,7 @@ You will need:
 
 Once you have pulled down the code:
 - composer install
+- php artisan migrate:fresh --seed
 - npm install
 - php artisan serve
 
