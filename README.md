@@ -6,7 +6,8 @@ This assessment repo is built on top of one of our go-to stacks:
 - [Laravel](https://laravel.com/docs)
 - [InertiaJS](https://inertiajs.com/how-it-works)
 - [Vue3](https://vuejs.org/guide/introduction.html)
-- [TailwindCSS](https://tailwindcss.com/docs).
+- [TailwindCSS](https://tailwindcss.com/docs)
+- [DaisyUI](https://daisyui.com/components/)
 
 ##Getting it running (without Docker/Sail)
 You will need:
@@ -48,9 +49,9 @@ At this point, you should be able to navigate to localhost:80, and see the websi
 
 
 ## Instructions
-You will be given 2-4 hours to complete as many tickets as you want.  Which tickets you chose to complete are up to you. We include multiple ticket types ranging from fullstack/frontend/backend, and both bug fixes and new feature implementations.
+You will be given 2-4 hours to complete tickets from a ticket pool.  Which tickets you choose to complete are up to you. We include multiple ticket types ranging from fullstack/frontend/backend, and both bug fixes and new feature implementations.
 
-Unless the ticket specifies otherwise, you are not to add additional composer/npm packages, and must work within the confines of given tech stack.
+Unless the ticket specifies otherwise, you are not allowed to add additional composer/npm packages, and must work within the confines of given tech stack. For CSS, we prefer you use Tailwind/Daisy where possible, and fallback to traditional scoped css.
 
 You can use as much documentation and resources from the internet as you want, as long as there as you aren't receiving "live" help from any other person(s).
 
