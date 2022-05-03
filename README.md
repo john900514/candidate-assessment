@@ -36,10 +36,10 @@ php artisan migrate:fresh --seed
 ##Development Server
 
 ```bash
-# starts the development server, and recompiles the JS when you save
+# starts the node development server, and recompiles the JS when you save
 npm run hot
 
-#if for somereason you just want to do a development build once, and not watch:
+#if for some reason you just want to do a single development build, and not watch for changes:
 npm run develop
 
 #start the application
@@ -56,10 +56,9 @@ Unless the ticket specifies otherwise, you are not allowed to add additional com
 You can use as much documentation and resources from the internet as you want, as long as there as you aren't receiving "live" help from any other person(s).
 
 ## Ready to begin?
-Got the application stood up, and ready to go? Email [Philip](mailto:philip@capeandbay.com) saying you are ready for the tickets. Timer starts on email reply with tickets.
+Got the environment and application stood up, and ready to go? Email [Philip](mailto:philip@capeandbay.com) saying you are ready for the tickets. Timer starts on email reply with tickets.
 
 ## Completion
-
 Once you are done with the assessment, zip up the progress, and upload it to our google drive. Email [Philip](mailto:philip@capeandbay.com) with a list of tickets you attempted to complete, even if you made progress, but didn't quite finish all the way.
 
 ## License
