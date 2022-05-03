@@ -1,5 +1,7 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
+#Developer Assesment
+
 ## Tech Stack
 
 This assessment repo is built on top of one of our go-to stacks:
@@ -9,7 +11,7 @@ This assessment repo is built on top of one of our go-to stacks:
 - [TailwindCSS](https://tailwindcss.com/docs)
 - [DaisyUI](https://daisyui.com/components/)
 
-##Getting it running (without Docker/Sail)
+##Setup
 You will need:
 - PHP 8.1+
 - Composer
@@ -19,34 +21,32 @@ You will need:
 Once you have pulled down the code:
 - copy .env.example to .env
 - create a mysql database "candidate_assessment"
-- composer install
-- php artisan migrate:fresh --seed
-- npm install -f
-- php artisan serve
+
+```bash
+# install php dependencies
+composer install
+
+# install node dependencies
+npm install
+
+#create and seed the db
+php artisan migrate:fresh --seed
+```
+
+##Development Server
+
+```bash
+# starts the development server, and recompiles the JS when you save
+npm run hot
+
+#if for somereason you just want to do a development build once, and not watch:
+npm run develop
+
+#start the application
+php artisan serve
+```
 
 At this point, you should be able to navigate to localhost:8080, and see the website.
-- npm run develop - does a single development build
-- npm run watch - watches for code changes, and reruns development builds automatically
-- npm run hot - same as npm run watch, but tries to hot reload the code so you don't have to refresh the page in your browser.
-
-##Getting it running (with Docker/Sail)
-You will need:
-- PHP 8.1+
-- Composer
-- Docker (LTS/Latest)
-
-Once you have pulled down the code:
-- copy .env.sail to .env
-- composer install
-- ./vendor/bin/sail up
-- ./vendor/bin/sail artisan migrate:fresh --seed
-- ./vendor/bin/sail npm install -f
-
-At this point, you should be able to navigate to localhost:80, and see the website.
-- ./vendor/bin/sail npm run develop - does a single development build
-- ./vendor/bin/sail npm run watch - watches for code changes, and reruns development builds automatically
-- ./vendor/bin/sail npm run hot - same as npm run watch, but tries to hot reload the code so you don't have to refresh the page in your browser.
-
 
 ## Instructions
 You will be given 2-4 hours to complete tickets from a ticket pool.  Which tickets you choose to complete are up to you. We include multiple ticket types ranging from fullstack/frontend/backend, and both bug fixes and new feature implementations.
