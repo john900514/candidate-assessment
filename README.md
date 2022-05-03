@@ -19,8 +19,10 @@ You will need:
 - Node 16
 
 Once you have pulled down the code:
+
 ###Environment:
 Copy .env.example to .env
+
 ###Database
 Create a mysql database "candidate_assessment"
 
