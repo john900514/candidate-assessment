@@ -19,8 +19,12 @@ You will need:
 - Node 16
 
 Once you have pulled down the code:
-- copy .env.example to .env
-- create a mysql database "candidate_assessment"
+###Environment:
+Copy .env.example to .env
+###Database
+Create a mysql database "candidate_assessment"
+
+###Dependencies
 
 ```bash
 # install php dependencies
