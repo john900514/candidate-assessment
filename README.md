@@ -52,7 +52,7 @@ npm run develop
 php artisan serve
 ```
 
-At this point, you should be able to navigate to localhost:8080, and see the website.
+At this point, you should be able to navigate to localhost:8000, and see the website.
 
 ## Instructions
 You will be given 2-4 hours to complete tickets from a ticket pool.  Which tickets you choose to complete are up to you. We include multiple ticket types ranging from fullstack/frontend/backend, and both bug fixes and new feature implementations.
