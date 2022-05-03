@@ -13,7 +13,7 @@
 
                 <div class="section-heading text-center pt-8 pb-12 mx-12 md:mx-40">
                     <p class="text-left text-xl text-black">Nothing can replace a first-hand look. During your complimentary visit to the club, you can enjoy AMAZING NEW equipment, a variety of GROUP FITNESS classes, relax by the indoor or outdoor pool and on your way out enjoy a refreshing beverage at THE Café!</p>
-                    <form @submit.prevent="submit()">
+                    <form @submit.prevent="handleSubmit">
                         <div class="flex flex-col md:flex-wrap md:flex-row mx-4 my-12 justify-between">
                             <div class="form-group md:w-[50%] md:pr-4 pt-4 md:pt-0">
                                 <input type="text" class="w-full bg-white rounded-[0px] border-black text-black" v-model="form.first_name" placeholder="First Name" required>
@@ -25,7 +25,7 @@
                                 <input type="email" class="w-full bg-white rounded-[0px] border-black text-black" v-model="form.email" placeholder="Email Address" required>
                             </div>
                             <div class="form-group md:w-[50%] pt-4">
-                                <input type="text" class="w-full bg-white rounded-[0px] border-black text-black" v-model="form.phone" placeholder="Mobile Phone" required>
+                                <phone-input class="w-full !bg-white !rounded-[0px] !border-black text-black" v-model="form.phone" placeholder="Mobile Phone" required />
                             </div>
                         </div>
 
@@ -36,8 +36,8 @@
                             </select>
 
                             <div class="pt-8">
-                                <input type="checkbox" v-model="form.consent" required>
-                                <label class="pl-4">I hereby consent to receive phone, text and email messages from or on behalf of The Athletic Club at the telephone number and email provided. I understand that consent is not a condition of purchase.</label>
+                                <input type="checkbox" v-model="form.consent" id="consent" required>
+                                <label class="pl-4" for="consent">I hereby consent to receive phone, text and email messages from or on behalf of The Athletic Club at the telephone number and email provided. I understand that consent is not a condition of purchase.</label>
                             </div>
                         </div>
 
@@ -54,32 +54,31 @@
 <script>
 import { Inertia } from "@inertiajs/inertia";
 import DefaultLayout from "@/Layouts/DefaultLayout";
+import PhoneInput from "@/Components/PhoneInput";
+import {reactive} from "vue";
+
 export default {
     name: "FreeTrialPage",
     components: {
-        DefaultLayout
+        DefaultLayout,
+        PhoneInput
     },
     props: ['prefooter', 'bannerImg', 'clubs'],
-    data() {
-        return {
-            loading:false,
-            form: {
-                'first_name': '',
-                'last_name': '',
-                'email': '',
-                'phone': '',
-                'club_id': '',
-                'consent': false,
-            }
-        }
-    },
-    methods: {
-        submit() {
-            let _this = this;
-            this.loading = true;
+    setup() {
+        let loading = false;
+        const form = reactive({
+            'first_name': '',
+            'last_name': '',
+            'email': '',
+            'phone': '',
+            'club_id': '',
+            'consent': false,
+        });
 
+        const handleSubmit = async () => {
+            loading = true;
 
-            axios.post('/free-trial', this.form)
+            axios.post('/free-trial', form)
                 .then(({ data }) => {
                     new Noty({
                         theme: 'sunset',
@@ -95,12 +94,11 @@ export default {
                         type: 'error',
                         text: 'An error occurred - '+err
                     }).show()
-                    _this.loading = false;
+                    loading = false;
                 })
         }
-    },
-    mounted() {
 
+        return {form, handleSubmit, loading};
     }
 }
 </script>

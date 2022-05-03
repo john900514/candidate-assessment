@@ -13,7 +13,7 @@
                     </label>
                 </div>
                 <!-- Sidebar content here -->
-                <li><Link class="uppercase font-bold text-xl hover:text-secondary">Home</Link></li>
+                <li><Link class="uppercase font-bold text-xl hover:text-secondary" href="/">Home</Link></li>
                 <li><Link class="uppercase font-bold text-xl hover:text-secondary" href="/programs">Programs & Services</Link></li>
                 <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Combo6</a></li>
                 <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Classes</a></li>
@@ -22,7 +22,7 @@
                 <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Remodel</a></li>
                 <li><Link class="uppercase font-bold text-xl hover:text-secondary" href="/news">Latest News</Link></li>
                 <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Faq</a></li>
-                <li><a class="uppercase font-bold text-xl hover:text-secondary" @click.prevent="notAvailable()">Contact Us</a></li>
+                <li><Link class="uppercase hover:text-secondary" href="/contact"><i class="las la-map-marker text-xl mr-2 text-secondary"></i> Contact Us</Link></li>
                 <li><a class="uppercase hover:text-secondary" @click.prevent="notAvailable()"><i class="lar la-user text-xl mr-2 text-secondary"></i> Memberships</a></li>
                 <li><Link class="uppercase hover:text-secondary" href="/locations"><i class="las la-map-marker text-xl mr-2 text-secondary"></i> Locations</Link></li>
                 <li><a class="uppercase hover:text-secondary" @click.prevent="notAvailable()"><i class="las la-lock text-xl mr-2 text-secondary"></i> Member Login</a></li>

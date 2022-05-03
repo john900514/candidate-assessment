@@ -44,6 +44,7 @@ class ProcessFreeTrialAction
 
     public function asController() : string | false
     {
+        sleep(5);
         return $this->handle(request()->all());
     }
 
