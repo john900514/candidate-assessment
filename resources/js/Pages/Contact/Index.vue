@@ -9,28 +9,28 @@
                 >
                     <div class="form-control">
                         <label for="name">Name</label>
-                        <input type="text" id="name" v-model="form.name"/>
+                        <input type="text" id="name" v-model="form.name" />
                         <div v-if="form.errors.name" class="form-error">
                             {{ form.errors.name }}
                         </div>
                     </div>
                     <div class="form-control">
                         <label for="name">Email</label>
-                        <input type="email" id="email" v-model="form.email"/>
+                        <input type="email" id="email" v-model="form.email" />
                         <div v-if="form.errors.email" class="form-error">
                             {{ form.errors.email }}
                         </div>
                     </div>
                     <div class="form-control">
                         <label for="name">Phone</label>
-                        <phone-input id="phone" v-model="form.phone"/>
+                        <phone-input id="phone" v-model="form.phone" />
                         <div v-if="form.errors.phone" class="form-error">
                             {{ form.errors.phone }}
                         </div>
                     </div>
                     <div class="form-control">
                         <label for="name">Message</label>
-                        <textarea id="message" v-model="form.message"/>
+                        <textarea id="message" v-model="form.message" />
                         <div v-if="form.errors.message" class="form-error">
                             {{ form.errors.message }}
                         </div>
@@ -81,7 +81,7 @@ button {
 input {
     min-width: 20rem;
 }
-.form-error{
+.form-error {
     @apply text-red text-sm;
 }
 </style>

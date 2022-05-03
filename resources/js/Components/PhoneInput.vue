@@ -7,7 +7,7 @@
     />
 </template>
 <style scoped>
-input{
+input {
     @apply input;
 }
 </style>

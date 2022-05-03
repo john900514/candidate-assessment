@@ -1,7 +1,5 @@
 <template>
-    <default-layout
-        :show-prefooter="prefooter"
-    >
+    <default-layout :show-prefooter="prefooter">
         <template #layoutExtraHead>
             <club-info :club="club" :banner-img="bannerImg"></club-info>
         </template>
@@ -25,19 +23,14 @@ export default {
     components: {
         ClubInfo,
         PreFooter,
-        DefaultLayout
+        DefaultLayout,
     },
-    props: ['prefooter', 'club', 'bannerImg'],
+    props: ["prefooter", "club", "bannerImg"],
     data() {
-        return {}
+        return {};
     },
-    mounted() {
-
-    }
-
-}
+    mounted() {},
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

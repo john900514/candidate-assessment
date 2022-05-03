@@ -1,31 +1,31 @@
 <template>
     <div>
-        <img :src="image"/>
-        <h1>{{title}}</h1>
+        <img :src="image" />
+        <h1>{{ title }}</h1>
         <p>
-            {{body}}
+            {{ body }}
         </p>
     </div>
 </template>
 
 <style scoped>
-div{
+div {
     @apply flex flex-col gap-4 max-w-2xl;
 }
-h1{
-    @apply uppercase font-bold text-xl
+h1 {
+    @apply uppercase font-bold text-xl;
 }
 </style>
 
 <script>
 import { Inertia } from "@inertiajs/inertia";
 import DefaultLayout from "@/Layouts/DefaultLayout";
-import { Link } from '@inertiajs/inertia-vue3'
+import { Link } from "@inertiajs/inertia-vue3";
 
 export default {
     components: {
         Link,
-        DefaultLayout
+        DefaultLayout,
     },
     props: {
         title: {
@@ -39,11 +39,9 @@ export default {
         image: {
             type: String,
             required: true,
-        }
+        },
     },
-}
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

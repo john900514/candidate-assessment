@@ -14,9 +14,7 @@
 
         <slot name="content"></slot>
 
-        <default-footer
-            :prefooter="showPrefooter"
-        ></default-footer>
+        <default-footer :prefooter="showPrefooter"></default-footer>
     </div>
 </template>
 
@@ -25,14 +23,12 @@ import DefaultHeader from "@/Layouts/Includes/DefaultHeader";
 import DefaultFooter from "@/Layouts/Includes/DefaultFooter";
 export default {
     name: "DefaultLayout",
-    props: ['showPrefooter'],
+    props: ["showPrefooter"],
     components: {
         DefaultHeader,
-        DefaultFooter
-    }
-}
+        DefaultFooter,
+    },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

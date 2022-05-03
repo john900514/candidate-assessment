@@ -1,9 +1,8 @@
-require('./bootstrap');
+require("./bootstrap");
 
-import { createApp, h } from 'vue';
+import { createApp, h } from "vue";
 
-const el = '#vue-app-wrapper'
+const el = "#vue-app-wrapper";
 const app = createApp({});
 
-
-app.mount(el)
+app.mount(el);
